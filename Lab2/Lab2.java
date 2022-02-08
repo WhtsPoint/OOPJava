@@ -7,6 +7,13 @@ public class Lab2 {
 
     public static void main(String[] args) throws Exception {
 
+        /*
+            Номер зачётки : 20
+            C5 = 0 (C=a×B, a - const)
+            C7 =  6 (float)
+            C11 = 9 (Знайти середнє значення елементів кожного стовпчика матриця)
+
+         */
         Lab2.scanner = new Scanner(System.in);
 
         System.out.println("Введіть розмір матриці:");
