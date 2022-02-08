@@ -45,7 +45,7 @@ public class Lab2 {
             for  (int index = 0; index < N; index++)  {
                 sum += matrixC[index][jindex];
             }
-            System.out.printf("%f ", sum);
+            System.out.printf("%f ", sum / N);
         }
     }
 
