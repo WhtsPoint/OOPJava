@@ -12,23 +12,19 @@ public class KPI {
     private ArrayList<Student> _studentList = new ArrayList<Student>();
 
 
-    public void addStudent(Student addedStudent)
-    {
+    public void addStudent(Student addedStudent) {
         _studentList.add(addedStudent);
     }
 
-    public void sortByGrade()
-    {
+    public void sortByGrade() {
         Collections.sort(_studentList, new Grade());
     }
 
-    public void sortByIndex()
-    {
+    public void sortByIndex() {
         Collections.sort(_studentList, new Index().reversed());
     }
 
-    public String getStudentsInformation()
-    {
+    public String getStudentsInformation() {
         return _studentList.stream().map(Student::toString).collect(Collectors.joining(";\n"));
     }
 

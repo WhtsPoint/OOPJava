@@ -1,5 +1,6 @@
 package Lab3;
 
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -27,13 +28,13 @@ public class Lab3 {
 
         System.out.println("Найдені слова:");
 
-        String printedWords = "";
+        ArrayList<String> printedWords = new ArrayList<String>();
         for(String word : wordList)
         {
             if(word.length() == wordLength && !printedWords.contains(word.toLowerCase()))
             {
                 System.out.println(word);
-                printedWords += word.toLowerCase();
+                printedWords.add(word.toLowerCase());
             }
         }
 

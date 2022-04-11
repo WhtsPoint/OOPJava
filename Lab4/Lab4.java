@@ -1,18 +1,18 @@
 package Lab4;
 
 import java.util.ArrayList;
-import Lab4.KPI;
-import Lab4.Student;
 
 public class Lab4 {
     public static void main(String[] args) {
 
         ArrayList<Student> studentList = new ArrayList<Student>();
 
-        studentList.add(new Student("Казак Вадим", "IO", 13,8,92));
-        studentList.add(new Student("Васютинський Олександр", "IO", 13, 2, 95));
-        studentList.add(new Student("Литвиненко Роман", "IO", 13,14,99));
-        studentList.add(new Student("Гаджігасанлі Сахіл", "IO", 13, 3, 100));
+        StudentCreator receiver = new StudentCreator();
+        
+        studentList.add(receiver.create("Казак Вадим", "FICT", "IO13",8,92));
+        studentList.add(receiver.create("Васютинський Олександр", "FICT", "IO13", 2, 95));
+        studentList.add(receiver.create("Литвиненко Роман", "FICT", "IO13",14,99));
+        studentList.add(receiver.create("Гаджігасанлі Сахіл", "FICT", "IO13", 3, 100));
 
         KPI myGroup = new KPI();
 
@@ -32,7 +32,7 @@ public class Lab4 {
 
         // Спроба створити об'єкт з оцінкою, яка виходить за діапазон можливо. Отримаємо виключення
 
-        new Student("Ясінський Любомир", "IO", 13,31,123);
+        receiver.create("Ясінський Любомир", "IO", "IO13",31,123);
 
     }
 }

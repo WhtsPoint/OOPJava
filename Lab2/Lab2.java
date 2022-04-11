@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Lab2 {
     private static Scanner scanner;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         /*
             Номер зачётки : 20
@@ -49,7 +49,7 @@ public class Lab2 {
         }
     }
 
-    private static float[][] receiveMatrix(int size) throws Exception {
+    private static float[][] receiveMatrix(int size) {
 
         float[][] matrix = new float[size][size];
 
@@ -60,7 +60,7 @@ public class Lab2 {
                     matrix[index][jindex] = Lab2.scanner.nextFloat();
 
                 } else {
-                    throw new Exception("Wrong Entered Matrix Element");
+                    throw new IllegalArgumentException("Wrong Entered Matrix Element");
                 }
             }
         }
@@ -74,7 +74,6 @@ public class Lab2 {
             }
             System.out.printf("\n");
         }
-        ;
     }
 
 }
