@@ -42,23 +42,20 @@ public class Lab2 {
 
         for (int jindex = 0; jindex < N; jindex++) {
             float sum = 0;
-            for  (int index = 0; index < N; index++)  {
+            for (int index = 0; index < N; index++) {
                 sum += matrixC[index][jindex];
             }
             System.out.printf("%f ", sum / N);
         }
     }
 
-    private static float[][] receiveMatrix(int size) throws Exception
-    {
+    private static float[][] receiveMatrix(int size) throws Exception {
 
         float[][] matrix = new float[size][size];
 
-        for(int index = 0; index < size; index++)
-        {
-            for(int jindex = 0; jindex < size; jindex++)
-            {
-                if(Lab2.scanner.hasNextFloat()) {
+        for (int index = 0; index < size; index++) {
+            for (int jindex = 0; jindex < size; jindex++) {
+                if (Lab2.scanner.hasNextFloat()) {
 
                     matrix[index][jindex] = Lab2.scanner.nextFloat();
 
@@ -70,15 +67,14 @@ public class Lab2 {
         return matrix;
     }
 
-    private static void printMatrix(float[][] matrix)
-    {
-        for(float[] row : matrix)
-        {
-            for(float element : row)
-            {
+    private static void printMatrix(float[][] matrix) {
+        for (float[] row : matrix) {
+            for (float element : row) {
                 System.out.printf("%s\s", element);
             }
             System.out.printf("\n");
-        };
+        }
+        ;
     }
+
 }

@@ -40,7 +40,5 @@ public class Lab1 {
 
         System.out.printf("Result: %f", sum);
 
-
-        return;
     }
 }
