@@ -25,8 +25,7 @@ public class Lab1 {
         final int C = 2;
 
         if (a <= -C && -C <= n) {
-            System.out.println("Function is not differentiated on all interval\n");
-            return;
+            throw new IllegalArgumentException("Function is not differentiated on all interval\n");
         }
 
         float sum = 0;
