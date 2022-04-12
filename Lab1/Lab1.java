@@ -25,7 +25,7 @@ public class Lab1 {
         final int C = 2;
 
         if (a <= -C && -C <= n) {
-            throw new IllegalArgumentException("Function is not differentiated on all interval\n");
+            throw new IllegalArgumentException("Function is not differentiated on all typed interval\n");
         }
 
         float sum = 0;
