@@ -26,7 +26,7 @@ public class Lab3 {
 
         String questionSentences = "";
         while(matches.find())
-            questionSentences += matches.group();
+            questionSentences += matches.group() + " ";
 
 
         String clearedText = questionSentences.replaceAll("[^а-яА-Яa-zA-ZЇїкєЕi]+", "\s").replaceAll("\\s+", "\s").trim();
