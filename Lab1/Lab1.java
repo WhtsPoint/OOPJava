@@ -23,8 +23,12 @@ public class Lab1 {
         final int m = enteredNumbers[3];
         final int C = 2;
 
+        if(a > n || b > m) {
+            throw new IllegalArgumentException("Invalid typed edges");
+        }
+
         if (a <= -C && -C <= n) {
-            throw new IllegalArgumentException("Function is not differentiated on all typed interval\n");
+            throw new IllegalArgumentException("Function is not differentiated on all typed interval");
         }
 
         float sum = 0;
