@@ -13,8 +13,7 @@ public class Lab1 {
         for (int index = 0; index < enteredKeys.length; index++) {
             System.out.printf("Введіть число %s :\n",enteredKeys[index]);
             if (!scanner.hasNextInt()) {
-                System.out.println("Invalid inputed value type");
-                return;
+                throw new IllegalArgumentException("Invalid inputted value type");
             }
             enteredNumbers[index] = scanner.nextInt();
         }
