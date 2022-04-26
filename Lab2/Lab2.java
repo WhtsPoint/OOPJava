@@ -18,7 +18,10 @@ public class Lab2 {
 
         System.out.println("Введіть розмір матриці:");
 
+
         final int N = Lab2.scanner.nextInt();
+
+        if(N < 0) throw new IllegalArgumentException("N повинно бути натуральним числом");
 
         System.out.println("Введіть матрицю:");
         final float[][] matrixB = receiveMatrix(N);
@@ -75,5 +78,6 @@ public class Lab2 {
             System.out.printf("\n");
         }
     }
+
 
 }

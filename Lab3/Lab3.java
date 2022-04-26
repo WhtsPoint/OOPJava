@@ -25,7 +25,7 @@ public class Lab3 {
         Matcher matches = pattern.matcher(text);
 
         String questionSentences = "";
-        while(matches.find())
+        while (matches.find())
             questionSentences += matches.group() + " ";
 
 
@@ -36,10 +36,8 @@ public class Lab3 {
         System.out.println("Найдені слова:");
 
         ArrayList<String> printedWords = new ArrayList<String>();
-        for(String word : wordList)
-        {
-            if(word.length() == wordLength && !printedWords.contains(word.toLowerCase()))
-            {
+        for (String word : wordList) {
+            if (word.length() == wordLength && !printedWords.contains(word.toLowerCase())) {
                 System.out.println(word);
                 printedWords.add(word.toLowerCase());
             }
