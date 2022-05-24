@@ -19,20 +19,24 @@ public class Lab2 {
         System.out.println("Введіть розмір матриці:");
 
 
-        final int N = Lab2.scanner.nextInt();
+        final int yLength = Lab2.scanner.nextInt();
 
-        if(N < 0) throw new IllegalArgumentException("N повинно бути натуральним числом");
+        final int xLength = Lab2.scanner.nextInt();
+
+
+        if(xLength < 0 || yLength < 0) throw new IllegalArgumentException("Розміри матриці повинні бути натуральним числом");
 
         System.out.println("Введіть матрицю:");
-        final float[][] matrixB = receiveMatrix(N);
+        final float[][] matrixB = receiveMatrix(yLength,xLength);
 
         System.out.println("Введіть константу :");
-        final int a = Lab2.scanner.nextInt();
+        final float a = Lab2.scanner.nextFloat();
 
-        final float[][] matrixC = new float[N][N];
 
-        for (int index = 0; index < N; index++) {
-            for (int jindex = 0; jindex < N; jindex++) {
+        final float[][] matrixC = new float[yLength][xLength];
+
+        for (int index = 0; index < yLength; index++) {
+            for (int jindex = 0; jindex < xLength; jindex++) {
                 matrixC[index][jindex] = a * matrixB[index][jindex];
             }
         }
@@ -43,21 +47,21 @@ public class Lab2 {
 
         System.out.println("Результати другої дії:");
 
-        for (int jindex = 0; jindex < N; jindex++) {
+        for (int jindex = 0; jindex < xLength; jindex++) {
             float sum = 0;
-            for (int index = 0; index < N; index++) {
+            for (int index = 0; index < yLength; index++) {
                 sum += matrixC[index][jindex];
             }
-            System.out.printf("%f ", sum / N);
+            System.out.printf("%f ", sum / yLength);
         }
     }
 
-    private static float[][] receiveMatrix(int size) {
+    private static float[][] receiveMatrix(int y, int x) {
 
-        float[][] matrix = new float[size][size];
+        float[][] matrix = new float[y][x];
 
-        for (int index = 0; index < size; index++) {
-            for (int jindex = 0; jindex < size; jindex++) {
+        for (int index = 0; index < y; index++) {
+            for (int jindex = 0; jindex < x; jindex++) {
                 if (Lab2.scanner.hasNextFloat()) {
 
                     matrix[index][jindex] = Lab2.scanner.nextFloat();
