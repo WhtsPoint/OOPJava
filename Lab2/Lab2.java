@@ -33,7 +33,7 @@ public class Lab2 {
         final float a = Lab2.scanner.nextFloat();
 
 
-        final float[][] matrixC = new float[yLength][xLength];
+        float[][] matrixC = new float[yLength][xLength];
 
         for (int index = 0; index < yLength; index++) {
             for (int jindex = 0; jindex < xLength; jindex++) {
