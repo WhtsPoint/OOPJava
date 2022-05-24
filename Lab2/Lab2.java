@@ -47,8 +47,9 @@ public class Lab2 {
 
         System.out.println("Результати другої дії:");
 
+        float sum;
         for (int jindex = 0; jindex < xLength; jindex++) {
-            float sum = 0;
+            sum = 0;
             for (int index = 0; index < yLength; index++) {
                 sum += matrixC[index][jindex];
             }
